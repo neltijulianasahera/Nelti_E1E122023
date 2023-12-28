@@ -60,8 +60,10 @@ class KelolaBuku(DatabaseManager):
 class User(DatabaseManager):
     def __init__(self, db_file, username, password):
         super().__init__(db_file)
-        self.username = username
+        self.__username = username
+        #username di sini diberi konsep encapsulation agar username berisifat privat dan tdak dapat di akses dari kelas lain#
         self.__password = password
+        #disini konsep encapsulation terdapat pada password. Dimana password di sini diberi konsep encaplusation agar tidak dapat di akses dari kelas lain dan password ini bersifat privat#
     
          
 
